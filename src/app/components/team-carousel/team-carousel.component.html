@@ -1,0 +1,50 @@
+<div class="team-section">
+  <h3 class="team-title">Conheça nossa equipe 💛</h3>
+  <p class="team-subtitle">
+    Contamos com uma equipe de profissionais especializados, desde veterinários
+    até tosadores certificados, todos compartilhando o mesmo compromisso:
+    <span class="emphasis">tratar cada pet como se fosse nosso.</span>
+  </p>
+
+  <div
+    class="carousel-container"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+  >
+    <div
+      #track
+      class="carousel-track"
+      [style.transition-duration]="transitionSpeed"
+    >
+      <div class="carousel-slide" *ngFor="let member of teamMembers">
+        <div class="team-card">
+          <div class="card-image">
+            <img [src]="member.image" [alt]="member.name" />
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h4>{{ member.name }}</h4>
+              <span class="card-badge" [class]="member.badgeClass">{{
+                member.role
+              }}</span>
+            </div>
+            <p class="card-description">{{ member.description }}</p>
+            <div class="card-tags">
+              <span *ngFor="let tag of member.tags">{{ tag }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-indicators">
+      <button
+        *ngFor="let _ of indicatorCount; let j = index"
+        class="indicator"
+        [class.active]="j === Math.floor(currentIndex / cardsPerView)"
+        (click)="goToSlide(j * cardsPerView)"
+        [attr.aria-label]="'Grupo ' + (j + 1)"
+      ></button>
+    </div>
+  </div>
+</div>

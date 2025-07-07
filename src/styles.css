@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icon-size {
+  width: 20px;
+  height: 20px;
+}
