@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core'; 
 import {
   FormBuilder,
   FormGroup,
@@ -46,44 +46,45 @@ export class ContactFormComponent implements AfterViewInit {
     this.resetForm();
   }
 
-  onSubmit() {
-    if (this.contactForm.invalid) {
-      this.markAllAsTouched();
-      return;
-    }
-
-    this.isLoading = true;
-
-    const userName = this.contactForm.value.name;
-    const userEmail = this.contactForm.value.email;
-    const userMessage = this.contactForm.value.message;
-
-    const formData = new FormData();
-    formData.append('name', userName);
-    formData.append('email', userEmail);
-    formData.append(
-      'message',
-      `Olá ${userName},\n\nRecebemos sua mensagem:\n"${userMessage}"\n\nEntraremos em contato em breve. 💌\n\nEquipe Aulovers`
-    );
-    formData.append('_cc', userEmail);
-    formData.append('_replyto', userEmail);
-    formData.append('_subject', `Nova mensagem de ${userName}`);
-
-    this.http.post('https://formspree.io/f/xanjzabe', formData).subscribe({
-      next: () => {
-        this.formSubmitted = true;
-        this.isLoading = false;
-        this.openModal();
-      },
-      error: (err) => {
-        console.error('Erro no envio:', err);
-        this.isLoading = false;
-        alert(
-          'Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.'
-        );
-      },
-    });
+ onSubmit() {
+  if (this.contactForm.invalid) {
+    this.markAllAsTouched();
+    return;
   }
+
+  this.isLoading = true;
+
+  const userName = this.contactForm.value.name;
+  const userEmail = this.contactForm.value.email;
+  const userMessage = this.contactForm.value.message;
+
+  const formData = new FormData();
+  formData.append('name', userName);
+  formData.append('email', userEmail);
+  formData.append(
+    'message',
+    `Olá ${userName},\n\nRecebemos sua mensagem:\n"${userMessage}"\n\nEntraremos em contato em breve. 💌\n\nEquipe Aulovers`
+  );
+  formData.append('_cc', userEmail);
+  formData.append('_replyto', userEmail);
+  formData.append('_subject', `Nova mensagem de ${userName}`);
+
+  this.http.post('https://formspree.io/f/mvgrjkpw', formData).subscribe({
+    next: () => {
+      this.formSubmitted = true;
+      this.isLoading = false;
+      this.openModal();
+    },
+    error: (err) => {
+      console.error('Erro no envio:', err);
+      this.isLoading = false;
+      alert(
+        'Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.'
+      );
+    },
+  });
+}
+
 
   resetForm() {
     this.formSubmitted = false;
@@ -95,4 +96,4 @@ export class ContactFormComponent implements AfterViewInit {
       control.markAsTouched();
     });
   }
-}
+}  
