@@ -5,18 +5,7 @@
   position: relative;
   max-width: 100%;
   margin: auto;
-   animation: fadeInUp 1.5s ease 0.3s forwards;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: fadeInUp 1.5s ease 0.3s forwards;
 }
 
 .section-badge {
@@ -41,30 +30,6 @@
   letter-spacing: 2px;
 }
 
-@keyframes float {
-  0% {
-    transform: rotate(5deg) translateY(0px);
-  }
-  50% {
-    transform: rotate(5deg) translateY(-5px);
-  }
-  100% {
-    transform: rotate(5deg) translateY(0px);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Container Principal */
 .benefits-section {
   padding: 20px;
   font-family: "Nunito", sans-serif;
@@ -109,7 +74,6 @@
   align-items: center;
 }
 
-
 .benefits-text p {
   color: #4b3f39;
   font-size: 1.1rem;
@@ -120,7 +84,6 @@
   font-weight: 600;
 }
 
-/* Botões */
 .benefits-buttons {
   display: flex;
   gap: 15px;
@@ -300,5 +263,39 @@
   .section-badge {
     font-size: 0.8rem;
     padding: 6px 12px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(5deg) translateY(-5px);
+  }
+  100% {
+    transform: rotate(5deg) translateY(0px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

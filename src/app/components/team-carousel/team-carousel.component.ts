@@ -30,7 +30,7 @@ export class TeamCarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       name: 'Dra. Letícia',
       role: 'Fundadora',
-      image: '/Founder.svg',
+      image: '/Founder.webp',
       description:
         'Veterinária com 6 anos de experiência em cuidados integrados e bem-estar animal.',
       tags: ['Veterinária', 'Cuidados'],
@@ -39,7 +39,7 @@ export class TeamCarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       name: 'João T.',
       role: 'Tosador',
-      image: '/Groomer.svg',
+      image: '/Groomer.webp',
       description:
         'Especialista em estética pet com foco em conforto e bem-estar dos animais.',
       tags: ['Tosa', 'Estética'],
@@ -48,7 +48,7 @@ export class TeamCarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       name: 'Ana P.',
       role: 'Atendimento',
-      image: '/Receptionist.svg',
+      image: '/Reception.webp',
       description:
         'Recepcionista que garante carinho e atenção logo na entrada dos nossos clientes.',
       tags: ['Recepção', 'Atenção'],
@@ -57,7 +57,7 @@ export class TeamCarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       name: 'Carlos M.',
       role: 'Veterinário',
-      image: '/Doctor.svg',
+      image: '/Doctor.webp',
       description:
         'Especialista em emergências e cuidados intensivos para pets.',
       tags: ['Emergências', 'UTI Pet'],
@@ -66,7 +66,7 @@ export class TeamCarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       name: 'Mariana A.',
       role: 'Veterinária',
-      image: '/Doctor-2.svg',
+      image: '/Doctor-2.webp',
       description:
         'Especialista em emergências e cuidados intensivos para pets.',
       tags: ['Emergências', 'UTI Pet'],
@@ -75,7 +75,7 @@ export class TeamCarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       name: 'Angela M.',
       role: 'Tosador',
-      image: '/Groomer-2.svg',
+      image: '/Groomer-2.webp',
       description:
         'Especialista em estética pet com foco em conforto e bem-estar dos animais',
       tags: ['Tosa', 'Estética'],

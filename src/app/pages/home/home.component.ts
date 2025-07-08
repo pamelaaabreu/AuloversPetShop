@@ -8,7 +8,6 @@ import { WhoWeAreComponent } from '../../components/who-we-are/who-we-are.compon
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @Component({
   selector: 'app-home',
   standalone: true,

@@ -15,16 +15,17 @@
   animation: fadeIn 1.5s ease;
 }
 
- @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} 
+.h4-icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+}
+
+.h4-icon-wrapper i {
+  color: #e8672e;
+  font-size: 24px;
+}
 
 .section-tag {
   font-size: 4.1rem;
@@ -152,22 +153,11 @@
   transition: all 0.3s ease;
 }
 
-@keyframes flutter {
-  0%,
-  100% {
-    transform: rotate(-25deg) translateY(0);
-  }
-  50% {
-    transform: rotate(-20deg) translateY(-5px);
-  }
-}
-
 .story-image:hover + .heart-icon {
   transform: rotate(-15deg) scale(1.1);
   /* animation: none; */
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
   .section-tag {
     font-size: 3rem;
@@ -244,16 +234,15 @@
   color: #e8672e;
 }
 
-.title-with-icon svg.svg-icon {
-  width: 28px;
-  height: 28px;
-  fill: #e8672e;
-  flex-shrink: 0;
+.title-with-icon .svg-icon {
+  font-size: 26px; 
+  color: #e8672e;
+  transform: rotate(25deg);
   transition: transform 0.3s ease;
 }
 
 .title-with-icon:hover .svg-icon {
-  transform: scale(1.1);
+   transform: rotate(-10deg) scale(1.1);
 }
 
 .timeline {
@@ -297,7 +286,6 @@
   line-height: 1.6;
 }
 
-/* Responsivo para timeline */
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
@@ -311,7 +299,6 @@
   }
 }
 
-/* Wrapper para missão e valores */
 .mission-values-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -345,7 +332,6 @@
   line-height: 1.6;
 }
 
-/* Lista de valores com contadores passo a passo */
 .values-steps {
   list-style: none;
   counter-reset: step-counter;
@@ -385,7 +371,6 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-/* Chamada para ação */
 .cta-section {
   margin-top: 50px;
   padding: 30px;
@@ -414,7 +399,6 @@
   background-color: #c65420;
 }
 
-/* Ajustes menores para responsividade geral */
 @media (max-width: 768px) {
   .section-tag {
     font-size: 3rem;
@@ -448,5 +432,26 @@
   .story-image-container .story-image img {
     width: 180px;
     height: 180px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flutter {
+  0%,
+  100% {
+    transform: rotate(-25deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-20deg) translateY(-5px);
   }
 }

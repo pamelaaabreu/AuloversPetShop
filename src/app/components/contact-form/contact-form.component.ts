@@ -54,10 +54,20 @@ export class ContactFormComponent implements AfterViewInit {
 
     this.isLoading = true;
 
+    const userName = this.contactForm.value.name;
+    const userEmail = this.contactForm.value.email;
+    const userMessage = this.contactForm.value.message;
+
     const formData = new FormData();
-    formData.append('name', this.contactForm.value.name);
-    formData.append('email', this.contactForm.value.email);
-    formData.append('message', this.contactForm.value.message);
+    formData.append('name', userName);
+    formData.append('email', userEmail);
+    formData.append(
+      'message',
+      `Olá ${userName},\n\nRecebemos sua mensagem:\n"${userMessage}"\n\nEntraremos em contato em breve. 💌\n\nEquipe Aulovers`
+    );
+    formData.append('_cc', userEmail);
+    formData.append('_replyto', userEmail);
+    formData.append('_subject', `Nova mensagem de ${userName}`);
 
     this.http.post('https://formspree.io/f/xanjzabe', formData).subscribe({
       next: () => {
